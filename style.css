@@ -4,6 +4,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
 body {
     display: flex;
     padding: 0 10px;
@@ -17,6 +31,7 @@ body {
 }
 .result-details{
     color: white;
+    word-break: keep-all;
 }
 ::selection {
     color: #fff;
@@ -90,6 +105,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-top: 3px solid #007acc;
+    word-break: keep-all;
 }
 .content button {
     outline: none;
@@ -188,4 +204,12 @@ li:not(:first-child) span {
     .content button {
         margin-top: 10px;
     }
+}
+
+.result-details li.accuracy span {
+    color: red;
+}
+
+.result-details li.accuracy span.high-accuracy {
+    color: green;
 }
