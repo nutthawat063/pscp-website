@@ -17,19 +17,18 @@
     font-size: 24px;
     margin: 0;
 }
-
 body {
     display: flex;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient( #007acc, #6DD5FA, #FFFFFF);
+    background: linear-gradient(to bottom right, #6096B4, #93BFCF, #BDCDD6, #EEE9DA);
 }
-#paragraph{
-    color: #646669;
+#paragraph {
+    color: white;
 }
-.result-details{
+.result-details {
     color: white;
     word-break: keep-all;
 }
@@ -40,7 +39,7 @@ body {
 .wrapper {
     width: 700px;
     padding: 35px;
-    background: #1e1e1e;
+    background: linear-gradient(to bottom right, #190482, #363062, #363062, #435585);
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.05);
 }
@@ -52,7 +51,7 @@ body {
 .wrapper .content-box {
     padding: 13px 20px 0;
     border-radius: 10px;
-    border: 4px solid #007acc;
+    border: 4px solid #89CFF3;
 }
 .content-box .typing-text {
     overflow: hidden;
@@ -70,7 +69,7 @@ body {
     position: relative;
 }
 .typing-text p span.correct {
-    color: #d1d0c5;
+    color: lightgreen;
 }
 .typing-text p span.incorrect {
     color: #ca4754;
@@ -99,28 +98,29 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border-top: 3px solid #007acc;
+    border-top: 3px solid #DADDB1;
     word-break: keep-all;
 }
 .content button {
     outline: none;
     border: none;
     width: 105px;
-    color: #007acc;
+    color: #F6F1EE;
     padding: 8px 0;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     border-radius: 15px;
-    border: 3px solid #007acc;
+    border: 3px solid #ED7D31;
     background: none;
     transition: transform 0.2s ease;
 }
 .content button:active {
-    transform: scale(0.89);
+    transform: scale(0.9);
 }
 .content button:hover {
-    background: #FFFFFF;
+    background: #4f6992;
+    color: lightsalmon;
 }
 .content .result-details {
     display: flex;
@@ -202,9 +202,9 @@ li:not(:first-child) span {
 }
 
 .result-details li.accuracy span {
-    color: red;
+    color: rgb(241, 124, 124);
 }
 
 .result-details li.accuracy span.high-accuracy {
-    color: green;
+    color: lightgreen;
 }

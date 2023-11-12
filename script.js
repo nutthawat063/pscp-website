@@ -12,7 +12,6 @@ const tryAgainBtn = document.querySelector(".tryagain")
 const timeTag = document.querySelector(".time span b")
 const mistakeTag = document.querySelector(".mistake span")
 const wpmTag = document.querySelector(".wpm span")
-const cpmTag = document.querySelector(".cpm span")
 const accuracyTag = document.querySelector("#accuracy");
 
 let timer;
@@ -45,6 +44,14 @@ function initTyping(event) {
 
   stats(characters);
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Backspace" && !event.repeat){
+    event.preventDefault();
+    backspace(characters);
+  }
+  inpField.focus();
+})
 
 function backspace(characters) {
   if (charIndex > 0) {
@@ -97,7 +104,6 @@ function stats(characters) {
 
   wpmTag.innerText = wpm;
   mistakeTag.innerText = mistakes;
-  cpmTag.innerText = charIndex - mistakes;
 }
 
 function initTimer() {
@@ -121,8 +127,7 @@ function resetGame() {
     timeTag.innerText = timeLeft;
     wpmTag.innerText = 0;
     mistakeTag.innerText = 0;
-    cpmTag.innerText = 0;
-    accuracyTag.innerText = 0;
+    accuracyTag.innerText = 0 + "%";
 }
 
 inpField.addEventListener("input", initTyping);
