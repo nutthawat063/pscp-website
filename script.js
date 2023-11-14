@@ -93,7 +93,7 @@ function stats(characters) {
   let accuracy = ((totalCharacters - mistakes) / totalCharacters) * 100;
   accuracy = accuracy.toFixed(2);
   accuracyTag.innerText = accuracy + "%";
-  if (accuracy > 60) {
+  if (accuracy >= 95) {
     accuracyElement.classList.add('high-accuracy');
   } else {
     accuracyElement.classList.remove('high-accuracy');
